@@ -148,7 +148,7 @@ Artigos com a bandeira 🇺🇸 estão em inglês. Artigos com a bandeira 🇧�
         - [🇺🇸 Manhattan Distance](geometry/manhattan-distance.md)
 - Graphs
     - Graph traversal
-        - [🇺🇸 Breadth First Search](graph/breadth-first-search.md)
+        - [🇧🇷 Busca em Largura (BFS)](graph/breadth-first-search.md)
         - [🇺🇸 Depth First Search](graph/depth-first-search.md)
     - Connected components, bridges, articulations points
         - [🇺🇸 Finding Connected Components](graph/search-for-connected-components.md)
