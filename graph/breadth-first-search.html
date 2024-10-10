@@ -27,7 +27,7 @@
     
     
       
-        <title>🇺🇸 Breadth First Search - Algoritmos para Programação Competitiva</title>
+        <title>🇧🇷 Busca em Largura (BFS) - Algoritmos para Programação Competitiva</title>
       
     
     
@@ -91,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#breadth-first-search" class="md-skip">
+        <a href="#busca-em-largura-bfs" class="md-skip">
           Skip to content
         </a>
       
@@ -136,7 +136,7 @@
           <span class="md-ellipsis">
             <a href="#" onclick="scrollToTop()">
               
-                🇺🇸 Breadth First Search
+                🇧🇷 Busca em Largura (BFS)
               
             </a>
           </span>
@@ -4499,7 +4499,7 @@
           
   
   <span class="md-ellipsis">
-    🇺🇸 Breadth First Search
+    🇧🇷 Busca em Largura (BFS)
   </span>
   
 
@@ -4510,7 +4510,7 @@
         
   
   <span class="md-ellipsis">
-    🇺🇸 Breadth First Search
+    🇧🇷 Busca em Largura (BFS)
   </span>
   
 
@@ -4532,36 +4532,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#description-of-the-algorithm" class="md-nav__link">
+  <a href="#descricao-do-algoritmo" class="md-nav__link">
     <span class="md-ellipsis">
-      Description of the algorithm
+      Descrição do Algoritmo
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
+  <a href="#implementacao" class="md-nav__link">
     <span class="md-ellipsis">
-      Implementation
+      Implementação
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#applications-of-bfs" class="md-nav__link">
+  <a href="#aplicacoes-da-bfs" class="md-nav__link">
     <span class="md-ellipsis">
-      Applications of BFS
+      Aplicações da BFS
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#practice-problems" class="md-nav__link">
+  <a href="#problemas-praticos" class="md-nav__link">
     <span class="md-ellipsis">
-      Practice Problems
+      Problemas Práticos
     </span>
   </a>
   
@@ -6467,9 +6467,9 @@
                   <script type="text/javascript">
 window.onload = function() {
 	const newIssueURL = "https://github.com/cp-algorithms/cp-algorithms/issues/new";
-  const issueTitle = "Problem on article " + "\ud83c\uddfa\ud83c\uddf8 Breadth First Search";
+  const issueTitle = "Problem on article " + "\ud83c\udde7\ud83c\uddf7 Busca em Largura (BFS)";
 	const issueBody = `
- **Article:** [`+ "\ud83c\uddfa\ud83c\uddf8 Breadth First Search" + `](${window.location.href})
+ **Article:** [`+ "\ud83c\udde7\ud83c\uddf7 Busca em Largura (BFS)" + `](${window.location.href})
 
 **Problem:**
 <!--
@@ -6569,30 +6569,24 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="breadth-first-search">Breadth-first search<a class="headerlink" href="#breadth-first-search" title="Permanent link">&para;</a></h1>
-<p>Breadth first search is one of the basic and essential searching algorithms on graphs.</p>
-<p>As a result of how the algorithm works, the path found by breadth first search to any node is the shortest path to that node, i.e the path that contains the smallest number of edges in unweighted graphs.</p>
-<p>The algorithm works in <span class="arithmatex">$O(n + m)$</span> time, where <span class="arithmatex">$n$</span> is number of vertices and <span class="arithmatex">$m$</span> is the number of edges.</p>
-<h2 id="description-of-the-algorithm">Description of the algorithm<a class="headerlink" href="#description-of-the-algorithm" title="Permanent link">&para;</a></h2>
-<p>The algorithm takes as input an unweighted graph and the id of the source vertex <span class="arithmatex">$s$</span>. The input graph can be directed or undirected,
-it does not matter to the algorithm.</p>
-<p>The algorithm can be understood as a fire spreading on the graph: at the zeroth step only the source <span class="arithmatex">$s$</span> is on fire. At each step, the fire burning at each vertex spreads to all of its neighbors. In one iteration of the algorithm, the "ring of
-fire" is expanded in width by one unit (hence the name of the algorithm).</p>
-<p>More precisely, the algorithm can be stated as follows: Create a queue <span class="arithmatex">$q$</span> which will contain the vertices to be processed and a
-Boolean array <span class="arithmatex">$used[]$</span> which indicates for each vertex, if it has been lit (or visited) or not.</p>
-<p>Initially, push the source <span class="arithmatex">$s$</span> to the queue and set <span class="arithmatex">$used[s] = true$</span>, and for all other vertices <span class="arithmatex">$v$</span> set <span class="arithmatex">$used[v] = false$</span>.
-Then, loop until the queue is empty and in each iteration, pop a vertex from the front of the queue. Iterate through all the edges going out
-of this vertex and if some of these edges go to vertices that are not already lit, set them on fire and place them in the queue.</p>
-<p>As a result, when the queue is empty, the "ring of fire" contains all vertices reachable from the source <span class="arithmatex">$s$</span>, with each vertex reached in the shortest possible way.
-You can also calculate the lengths of the shortest paths (which just requires maintaining an array of path lengths <span class="arithmatex">$d[]$</span>) as well as save information to restore all of these shortest paths (for this, it is necessary to maintain an array of "parents" <span class="arithmatex">$p[]$</span>, which stores for each vertex the vertex from which we reached it).</p>
-<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
-<p>We write code for the described algorithm in C++ and Java.</p>
+<h1 id="busca-em-largura-bfs">Busca em Largura (BFS)<a class="headerlink" href="#busca-em-largura-bfs" title="Permanent link">&para;</a></h1>
+<p>A busca em largura (BFS - Breadth First Search) é um dos algoritmos de busca mais básicos e essenciais em grafos.</p>
+<p>Como resultado de seu funcionamento, o caminho encontrado pela BFS para qualquer nó é o caminho mais curto para aquele nó, ou seja, o caminho que contém o menor número de arestas em grafos não ponderados.</p>
+<p>O algoritmo funciona em tempo <span class="arithmatex">$O(n + m)$</span>, onde <span class="arithmatex">$n$</span> é o número de vértices e <span class="arithmatex">$m$</span> é o número de arestas.</p>
+<h2 id="descricao-do-algoritmo">Descrição do Algoritmo<a class="headerlink" href="#descricao-do-algoritmo" title="Permanent link">&para;</a></h2>
+<p>O algoritmo recebe como entrada um grafo não ponderado e o ID do vértice de origem <span class="arithmatex">$s$</span>. O grafo de entrada pode ser direcionado ou não direcionado, isso não importa para o algoritmo.</p>
+<p>O algoritmo pode ser entendido como um incêndio se espalhando pelo grafo: na etapa zero, apenas a origem <span class="arithmatex">$s$</span> está em chamas. A cada etapa, o fogo queimando em cada vértice se espalha para todos os seus vizinhos. Em uma iteração do algoritmo, o "anel de fogo" se expande em largura por uma unidade (daí o nome do algoritmo).</p>
+<p>Mais precisamente, o algoritmo pode ser descrito da seguinte forma: Crie uma fila <span class="arithmatex">$q$</span> que conterá os vértices a serem processados e um array booleano <span class="arithmatex">$used[]$</span> que indica, para cada vértice, se ele já foi queimado (ou visitado) ou não.</p>
+<p>Inicialmente, insira a origem <span class="arithmatex">$s$</span> na fila e defina <span class="arithmatex">$used[s] = true$</span> e, para todos os outros vértices <span class="arithmatex">$v$</span>, defina <span class="arithmatex">$used[v] = false$</span>. Em seguida, execute um loop até que a fila esteja vazia e, em cada iteração, remova um vértice da frente da fila. Itere por todas as arestas que saem deste vértice e, se alguma dessas arestas for para vértices que ainda não foram queimados, queime-os e coloque-os na fila.</p>
+<p>Como resultado, quando a fila estiver vazia, o "anel de fogo" conterá todos os vértices alcançáveis a partir da origem <span class="arithmatex">$s$</span>, com cada vértice alcançado da maneira mais curta possível. Você também pode calcular os comprimentos dos caminhos mais curtos (o que requer apenas a manutenção de um array de comprimentos de caminho <span class="arithmatex">$d[]$</span>), bem como salvar informações para recuperar todos esses caminhos mais curtos (para isso, é necessário manter um array de "pais" <span class="arithmatex">$p[]$</span>, que armazena para cada vértice o vértice a partir do qual o alcançamos).</p>
+<h2 id="implementacao">Implementação<a class="headerlink" href="#implementacao" title="Permanent link">&para;</a></h2>
+<p>Escrevemos o código para o algoritmo descrito em C++ e Java.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">C++</label><label for="__tabbed_1_2">Java</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">adj</span><span class="p">;</span><span class="w">  </span><span class="c1">// adjacency list representation</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="c1">// number of nodes</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">s</span><span class="p">;</span><span class="w"> </span><span class="c1">// source vertex</span>
+<div class="highlight"><pre><span></span><code><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">adj</span><span class="p">;</span><span class="w">  </span><span class="c1">// Representação da lista de adjacência</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="c1">// Número de nós</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">s</span><span class="p">;</span><span class="w"> </span><span class="c1">// Vértice de origem</span>
 
 <span class="n">queue</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">q</span><span class="p">;</span>
 <span class="n">vector</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">used</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
@@ -6616,10 +6610,10 @@ You can also calculate the lengths of the shortest paths (which just requires ma
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">adj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span><span class="w"> </span><span class="c1">// adjacency list representation</span>
+<div class="highlight"><pre><span></span><code><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">adj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span><span class="w"> </span><span class="c1">// Representação da lista de adjacência</span>
 
-<span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="c1">// number of nodes</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">s</span><span class="p">;</span><span class="w"> </span><span class="c1">// source vertex</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="c1">// Número de nós</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">s</span><span class="p">;</span><span class="w"> </span><span class="c1">// Vértice de origem</span>
 
 
 <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="p">();</span>
@@ -6645,18 +6639,18 @@ You can also calculate the lengths of the shortest paths (which just requires ma
 </div>
 </div>
 </div>
-<p>If we have to restore and display the shortest path from the source to some vertex <span class="arithmatex">$u$</span>, it can be done in the following manner:</p>
+<p>Se precisarmos recuperar e exibir o caminho mais curto da origem para algum vértice <span class="arithmatex">$u$</span>, isso pode ser feito da seguinte maneira:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">C++</label><label for="__tabbed_2_2">Java</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">used</span><span class="p">[</span><span class="n">u</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;No path!&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Sem caminho!&quot;</span><span class="p">;</span>
 <span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">path</span><span class="p">;</span>
 <span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="p">;</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">[</span><span class="n">v</span><span class="p">])</span>
 <span class="w">        </span><span class="n">path</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">v</span><span class="p">);</span>
 <span class="w">    </span><span class="n">reverse</span><span class="p">(</span><span class="n">path</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">path</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
-<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Path: &quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Caminho: &quot;</span><span class="p">;</span>
 <span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">path</span><span class="p">)</span>
 <span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">;</span>
 <span class="p">}</span>
@@ -6664,7 +6658,7 @@ You can also calculate the lengths of the shortest paths (which just requires ma
 </div>
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">used</span><span class="o">[</span><span class="n">u</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;No path!&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Sem caminho!&quot;</span><span class="p">);</span>
 <span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="p">();</span>
 <span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="p">;</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="o">[</span><span class="n">v</span><span class="o">]</span><span class="p">)</span>
@@ -6677,64 +6671,50 @@ You can also calculate the lengths of the shortest paths (which just requires ma
 </div>
 </div>
 </div>
-<h2 id="applications-of-bfs">Applications of BFS<a class="headerlink" href="#applications-of-bfs" title="Permanent link">&para;</a></h2>
+<h2 id="aplicacoes-da-bfs">Aplicações da BFS<a class="headerlink" href="#aplicacoes-da-bfs" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p>Find the shortest path from a source to other vertices in an unweighted graph.</p>
+<p>Encontrar o caminho mais curto de uma origem para outros vértices em um grafo não ponderado.</p>
 </li>
 <li>
-<p>Find all connected components in an undirected graph in <span class="arithmatex">$O(n + m)$</span> time:
-To do this, we just run BFS starting from each vertex, except for vertices which have already been visited from previous runs.
-Thus, we perform normal BFS from each of the vertices, but do not reset the array <span class="arithmatex">$used[]$</span> each and every time we get a new connected component, and the total running time will still be <span class="arithmatex">$O(n + m)$</span> (performing multiple BFS on the graph without zeroing the array <span class="arithmatex">$used []$</span> is called a series of breadth first searches).</p>
+<p>Encontrar todos os componentes conexos em um grafo não direcionado em tempo <span class="arithmatex">$O(n + m)$</span>:
+Para fazer isso, basta executar a BFS a partir de cada vértice, exceto para vértices que já foram visitados em execuções anteriores. Assim, realizamos a BFS normal a partir de cada um dos vértices, mas não redefinimos o array <span class="arithmatex">$used[]$</span> toda vez que obtemos um novo componente conectado, e o tempo total de execução ainda será <span class="arithmatex">$O(n + m)$</span> (executar múltiplas BFS no grafo sem zerar o array <span class="arithmatex">$used[]$</span> é chamado de série de buscas em largura).</p>
 </li>
 <li>
-<p>Finding a solution to a problem or a game with the least number of moves, if each state of the game can be represented by a vertex of the graph, and the transitions from one state to the other are the edges of the graph.</p>
+<p>Encontrar uma solução para um problema ou jogo com o menor número de movimentos, se cada estado do jogo puder ser representado por um vértice do grafo e as transições de um estado para o outro forem as arestas do grafo.</p>
 </li>
 <li>
-<p>Finding the shortest path in a graph with weights 0 or 1:
-This requires just a little modification to normal breadth-first search: Instead of maintaining array <span class="arithmatex">$used[]$</span>, we will now check if the distance to vertex is shorter than current found distance, then if the current edge is of zero weight, we add it to the front of the queue else we add it to the back of the queue.This modification is explained in more detail in the article <a href="01_bfs.html">0-1 BFS</a>.</p>
+<p>Encontrar o caminho mais curto em um grafo com pesos 0 ou 1:
+Isso requer apenas uma pequena modificação na busca em largura normal: em vez de manter o array <span class="arithmatex">$used[]$</span>, agora verificaremos se a distância até o vértice é menor que a distância encontrada atualmente; então, se a aresta atual tiver peso zero, nós a adicionamos à frente da fila; caso contrário, nós a adicionamos ao final da fila. Esta modificação é explicada com mais detalhes no artigo <a href="01_bfs.html">0-1 BFS</a>.</p>
 </li>
 <li>
-<p>Finding the shortest cycle in a directed unweighted graph:
-Start a breadth-first search from each vertex.
-As soon as we try to go from the current vertex back to the source vertex, we have found the shortest cycle containing the source vertex.
-At this point we can stop the BFS, and start a new BFS from the next vertex.
-From all such cycles (at most one from each BFS) choose the shortest.</p>
+<p>Encontrar o menor ciclo em um grafo direcionado não ponderado:
+Inicie uma busca em largura a partir de cada vértice. Assim que tentarmos voltar do vértice atual para o vértice de origem, teremos encontrado o menor ciclo contendo o vértice de origem. Neste ponto, podemos parar a BFS e iniciar uma nova BFS a partir do próximo vértice. De todos esses ciclos (no máximo um de cada BFS), escolha o mais curto.</p>
 </li>
 <li>
-<p>Find all the edges that lie on any shortest path between a given pair of vertices <span class="arithmatex">$(a, b)$</span>.
-To do this, run two breadth first searches:
-one from <span class="arithmatex">$a$</span> and one from <span class="arithmatex">$b$</span>.
-Let <span class="arithmatex">$d_a []$</span> be the array containing shortest distances obtained from the first BFS (from <span class="arithmatex">$a$</span>) and <span class="arithmatex">$d_b []$</span> be the array containing shortest distances obtained from the second BFS from <span class="arithmatex">$b$</span>.
-Now for every edge <span class="arithmatex">$(u, v)$</span> it is easy to check whether that edge lies on any shortest path between <span class="arithmatex">$a$</span> and <span class="arithmatex">$b$</span>:
-the criterion is the condition <span class="arithmatex">$d_a [u] + 1 + d_b [v] = d_a [b]$</span>.</p>
+<p>Encontrar todas as arestas que estão em qualquer caminho mais curto entre um determinado par de vértices <span class="arithmatex">$(a, b)$</span>.
+Para fazer isso, execute duas buscas em largura: uma de <span class="arithmatex">$a$</span> e outra de <span class="arithmatex">$b$</span>. Seja <span class="arithmatex">$d_a []$</span> o array contendo as menores distâncias obtidas da primeira BFS (de <span class="arithmatex">$a$</span>) e <span class="arithmatex">$d_b []$</span> o array contendo as menores distâncias obtidas da segunda BFS (de <span class="arithmatex">$b$</span>). Agora, para cada aresta <span class="arithmatex">$(u, v)$</span>, é fácil verificar se essa aresta está em qualquer caminho mais curto entre <span class="arithmatex">$a$</span> e <span class="arithmatex">$b$</span>: o critério é a condição <span class="arithmatex">$d_a [u] + 1 + d_b [v] = d_a [b]$</span>.</p>
 </li>
 <li>
-<p>Find all the vertices on any shortest path between a given pair of vertices <span class="arithmatex">$(a, b)$</span>.
-To accomplish that, run two breadth first searches:
-one from <span class="arithmatex">$a$</span> and one from <span class="arithmatex">$b$</span>.
-Let <span class="arithmatex">$d_a []$</span> be the array containing shortest distances obtained from the first BFS (from <span class="arithmatex">$a$</span>) and <span class="arithmatex">$d_b []$</span> be the array containing shortest distances obtained from the second BFS (from <span class="arithmatex">$b$</span>).
-Now for each vertex it is easy to check whether it lies on any shortest path between <span class="arithmatex">$a$</span> and <span class="arithmatex">$b$</span>:
-the criterion is the condition <span class="arithmatex">$d_a [v] + d_b [v] = d_a [b]$</span>.</p>
+<p>Encontrar todos os vértices em qualquer caminho mais curto entre um determinado par de vértices <span class="arithmatex">$(a, b)$</span>.
+Para fazer isso, execute duas buscas em largura: uma de <span class="arithmatex">$a$</span> e outra de <span class="arithmatex">$b$</span>. Seja <span class="arithmatex">$d_a []$</span> o array contendo as menores distâncias obtidas da primeira BFS (de <span class="arithmatex">$a$</span>) e <span class="arithmatex">$d_b []$</span> o array contendo as menores distâncias obtidas da segunda BFS (de <span class="arithmatex">$b$</span>). Agora, para cada vértice, é fácil verificar se ele está em qualquer caminho mais curto entre <span class="arithmatex">$a$</span> e <span class="arithmatex">$b$</span>: o critério é a condição <span class="arithmatex">$d_a [v] + d_b [v] = d_a [b]$</span>.</p>
 </li>
 <li>
-<p>Find the shortest path of even length from a source vertex <span class="arithmatex">$s$</span> to a target vertex <span class="arithmatex">$t$</span> in an unweighted graph:
-For this, we must construct an auxiliary graph, whose vertices are the state <span class="arithmatex">$(v, c)$</span>, where <span class="arithmatex">$v$</span> - the current node, <span class="arithmatex">$c = 0$</span> or <span class="arithmatex">$c = 1$</span> - the current parity.
-Any edge <span class="arithmatex">$(u, v)$</span> of the original graph in this new column will turn into two edges <span class="arithmatex">$((u, 0), (v, 1))$</span> and <span class="arithmatex">$((u, 1), (v, 0))$</span>.
-After that we run a BFS to find the shortest path from the starting vertex <span class="arithmatex">$(s, 0)$</span> to the end vertex <span class="arithmatex">$(t, 0)$</span>.</p>
+<p>Encontrar o caminho mais curto de comprimento par de um vértice de origem <span class="arithmatex">$s$</span> para um vértice de destino <span class="arithmatex">$t$</span> em um grafo não ponderado:
+Para isso, devemos construir um grafo auxiliar, cujos vértices são o estado <span class="arithmatex">$(v, c)$</span>, onde <span class="arithmatex">$v$</span> é o nó atual e <span class="arithmatex">$c = 0$</span> ou <span class="arithmatex">$c = 1$</span> é a paridade atual. Qualquer aresta <span class="arithmatex">$(u, v)$</span> do grafo original nesta nova coluna se transformará em duas arestas <span class="arithmatex">$((u, 0), (v, 1))$</span> e <span class="arithmatex">$((u, 1), (v, 0))$</span>. Depois disso, executamos uma BFS para encontrar o caminho mais curto do vértice inicial <span class="arithmatex">$(s, 0)$</span> ao vértice final <span class="arithmatex">$(t, 0)$</span>.</p>
 </li>
 </ul>
-<h2 id="practice-problems">Practice Problems<a class="headerlink" href="#practice-problems" title="Permanent link">&para;</a></h2>
+<h2 id="problemas-praticos">Problemas Práticos<a class="headerlink" href="#problemas-praticos" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="http://spoj.com/problems/AKBAR">SPOJ: AKBAR</a></li>
 <li><a href="http://www.spoj.com/problems/NAKANJ/">SPOJ: NAKANJ</a></li>
 <li><a href="http://www.spoj.com/problems/WATER">SPOJ: WATER</a></li>
 <li><a href="http://www.spoj.com/problems/MICEMAZE/">SPOJ: MICE AND MAZE</a></li>
 <li><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=2034">Timus: Caravans</a></li>
-<li><a href="http://web.archive.org/web/20200930162803/http://www.devskill.com/CodingProblems/ViewProblem/60">DevSkill - Holloween Party (archived)</a></li>
-<li><a href="http://web.archive.org/web/20170216192002/http://devskill.com:80/CodingProblems/ViewProblem/150">DevSkill - Ohani And The Link Cut Tree (archived)</a></li>
+<li><a href="http://web.archive.org/web/20200930162803/http://www.devskill.com/CodingProblems/ViewProblem/60">DevSkill - Holloween Party (arquivado)</a></li>
+<li><a href="http://web.archive.org/web/20170216192002/http://devskill.com:80/CodingProblems/ViewProblem/150">DevSkill - Ohani And The Link Cut Tree (arquivado)</a></li>
 <li><a href="http://www.spoj.com/problems/SPIKES/">SPOJ - Spiky Mazes</a></li>
-<li><a href="http://www.spoj.com/problems/ADV04F1/">SPOJ - Four Chips (hard)</a></li>
+<li><a href="http://www.spoj.com/problems/ADV04F1/">SPOJ - Four Chips (difícil)</a></li>
 <li><a href="http://www.spoj.com/problems/INVESORT/">SPOJ - Inversion Sort</a></li>
 <li><a href="http://codeforces.com/contest/59/problem/E">Codeforces - Shortest Path</a></li>
 <li><a href="http://www.spoj.com/problems/MULTII/">SPOJ - Yet Another Multiple Problem</a></li>
@@ -6754,7 +6734,7 @@ After that we run a BFS to find the shortest path from the starting vertex <span
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="David Zhang" data-bi-name="contributorprofile" target="_blank">David Zhang</a> (45.41%)</li><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (20.0%)</li><li><a href="#" title="Param Singh" data-bi-name="contributorprofile" target="_blank">Param Singh</a> (20.0%)</li><li><a href="#" title="Morass" data-bi-name="contributorprofile" target="_blank">Morass</a> (7.57%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (3.24%)</li><li><a href="#" title="Aryaman" data-bi-name="contributorprofile" target="_blank">Aryaman</a> (1.08%)</li><li><a href="#" title="PAVAN BANSAL" data-bi-name="contributorprofile" target="_blank">PAVAN BANSAL</a> (1.08%)</li><li><a href="#" title="Animesh Kumar" data-bi-name="contributorprofile" target="_blank">Animesh Kumar</a> (0.54%)</li><li><a href="#" title="Bemwa Malak" data-bi-name="contributorprofile" target="_blank">Bemwa Malak</a> (0.54%)</li><li><a href="#" title="Mariia Mykhailova" data-bi-name="contributorprofile" target="_blank">Mariia Mykhailova</a> (0.54%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="David Zhang" data-bi-name="contributorprofile" target="_blank">David Zhang</a> (44.58%)</li><li><a href="#" title="filipemsilv4" data-bi-name="contributorprofile" target="_blank">filipemsilv4</a> (25.3%)</li><li><a href="#" title="Param Singh" data-bi-name="contributorprofile" target="_blank">Param Singh</a> (15.06%)</li><li><a href="#" title="Morass" data-bi-name="contributorprofile" target="_blank">Morass</a> (7.83%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (3.61%)</li><li><a href="#" title="Aryaman" data-bi-name="contributorprofile" target="_blank">Aryaman</a> (1.2%)</li><li><a href="#" title="Animesh Kumar" data-bi-name="contributorprofile" target="_blank">Animesh Kumar</a> (0.6%)</li><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (0.6%)</li><li><a href="#" title="Mariia Mykhailova" data-bi-name="contributorprofile" target="_blank">Mariia Mykhailova</a> (0.6%)</li><li><a href="#" title="PAVAN BANSAL" data-bi-name="contributorprofile" target="_blank">PAVAN BANSAL</a> (0.6%)</li></ul>
 </ul>
                 
               </article>
