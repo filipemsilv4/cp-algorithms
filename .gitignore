@@ -10,3 +10,5 @@ converted.pdf
 firebase-debug.log
 
 authors.json
+/venv
+/__pycache__
