@@ -9,7 +9,7 @@ Artigos com a bandeira 🇺🇸 estão em inglês. Artigos com a bandeira 🇧�
     - [🇧🇷 Página Inicial](index.md)
     - [🇧🇷 Navegação](navigation.md)
     - [🇺🇸 Tag index](tags.md)
-    - [🇺🇸 How to Contribute](contrib.md)
+    - [🇧🇷 Como Contribuir](contrib.md)
     - [🇺🇸 Code of conduct](code_of_conduct.md)
     - [🇺🇸 Preview](preview.md)
 - Algebra
