@@ -2531,7 +2531,7 @@
         
   
   <span class="md-ellipsis">
-    🇺🇸 Rabin-Karp for String Matching
+    🇧🇷 Algoritmo de Rabin-Karp para busca de padrões em strings
   </span>
   
 
@@ -6537,6 +6537,14 @@ Describe the issue of this article in detail.
   
   
 
+  
+  
+  
+
+  
+  
+  
+
 
 
 
@@ -6568,7 +6576,7 @@ Describe the issue of this article in detail.
 <h2 id="speeding-up-fibonacci-with-dynamic-programming-memoization">Speeding up Fibonacci with Dynamic Programming (Memoization)<a class="headerlink" href="#speeding-up-fibonacci-with-dynamic-programming-memoization" title="Permanent link">&para;</a></h2>
 <p>Our recursive function currently solves fibonacci in exponential time. This means that we can only handle small input values before the problem becomes too difficult. For instance, <span class="arithmatex">$f(29)$</span> results in <em>over 1 million</em> function calls!</p>
 <p>To increase the speed, we recognize that the number of subproblems is only <span class="arithmatex">$O(n)$</span>. That is, in order to calculate <span class="arithmatex">$f(n)$</span> we only need to know <span class="arithmatex">$f(n-1),f(n-2), \dots ,f(0)$</span>. Therefore, instead of recalculating these subproblems, we solve them once and then save the result in a lookup table.  Subsequent calls will use this lookup table and immediately return a result, thus eliminating exponential work! </p>
-<p>Each recursive call will check against a lookup table to see if the value has been calculated. This is done is <span class="arithmatex">$O(1)$</span> time.  If we have previously calcuated it, return the result, otherwise, we calculate the function normally. The overall runtime is <span class="arithmatex">$O(n)$</span>! This is an enormous improvement over our previous exponential time algorithm!</p>
+<p>Each recursive call will check against a lookup table to see if the value has been calculated. This is done in <span class="arithmatex">$O(1)$</span> time.  If we have previously calcuated it, return the result, otherwise, we calculate the function normally. The overall runtime is <span class="arithmatex">$O(n)$</span>! This is an enormous improvement over our previous exponential time algorithm!</p>
 <div class="highlight"><pre><span></span><code><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">MAXN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
 <span class="kt">bool</span><span class="w"> </span><span class="n">found</span><span class="p">[</span><span class="n">MAXN</span><span class="p">];</span>
 <span class="kt">int</span><span class="w"> </span><span class="n">memo</span><span class="p">[</span><span class="n">MAXN</span><span class="p">];</span>
@@ -6663,7 +6671,7 @@ Secondly, we only need to use the two previous values to calculate the current e
 </tr>
 <tr>
 <td>Longest Increasing Subsequence</td>
-<td>You are given an array containing <span class="arithmatex">$N$</span> integers. Your task is to determine the LCS in the array, i.e., LCS where every element is larger than the previous one.</td>
+<td>You are given an array containing <span class="arithmatex">$N$</span> integers. Your task is to determine the LIS in the array, i.e., a subsequence where every element is larger than the previous one.</td>
 </tr>
 <tr>
 <td>Counting all possible paths in a matrix.</td>
@@ -6703,6 +6711,8 @@ Secondly, we only need to use the two previous values to calculate the current e
 <li><a href="https://leetcode.com/problems/n-th-tribonacci-number/description/">LeetCode - 1137. N-th Tribonacci Number</a></li>
 <li><a href="https://leetcode.com/problems/pascals-triangle/description/">LeetCode - 118. Pascal's Triangle</a></li>
 <li><a href="https://leetcode.com/problems/divisor-game/description/">LeetCode - 1025. Divisor Game</a></li>
+<li><a href="https://codeforces.com/problemset/problem/699/C">Codeforces - Vacations</a></li>
+<li><a href="https://codeforces.com/problemset/problem/706/C">Codeforces - Hard problem</a></li>
 <li><a href="https://codeforces.com/problemset/problem/607/b">Codeforces - Zuma</a></li>
 <li><a href="https://leetcode.com/problems/maximal-square/description/">LeetCode - 221. Maximal Square</a></li>
 <li><a href="https://leetcode.com/problems/minimum-score-triangulation-of-polygon/description/">LeetCode - 1039. Minimum Score Triangulation of Polygon</a></li>
@@ -6715,7 +6725,7 @@ Secondly, we only need to use the two previous values to calculate the current e
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Michael Hayter" data-bi-name="contributorprofile" target="_blank">Michael Hayter</a> (82.21%)</li><li><a href="#" title="Zyad M. Ayad" data-bi-name="contributorprofile" target="_blank">Zyad M. Ayad</a> (12.27%)</li><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (2.45%)</li><li><a href="#" title="Shubham Phapale" data-bi-name="contributorprofile" target="_blank">Shubham Phapale</a> (1.84%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (0.61%)</li><li><a href="#" title="hitarth" data-bi-name="contributorprofile" target="_blank">hitarth</a> (0.61%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Michael Hayter" data-bi-name="contributorprofile" target="_blank">Michael Hayter</a> (80.61%)</li><li><a href="#" title="Zyad M. Ayad" data-bi-name="contributorprofile" target="_blank">Zyad M. Ayad</a> (11.52%)</li><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (2.42%)</li><li><a href="#" title="Shubham Phapale" data-bi-name="contributorprofile" target="_blank">Shubham Phapale</a> (1.82%)</li><li><a href="#" title="Ahmed Marouf" data-bi-name="contributorprofile" target="_blank">Ahmed Marouf</a> (1.21%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (1.21%)</li><li><a href="#" title="Naval Kishore" data-bi-name="contributorprofile" target="_blank">Naval Kishore</a> (0.61%)</li><li><a href="#" title="hitarth" data-bi-name="contributorprofile" target="_blank">hitarth</a> (0.61%)</li></ul>
 </ul>
                 
               </article>

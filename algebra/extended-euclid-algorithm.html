@@ -2517,7 +2517,7 @@
         
   
   <span class="md-ellipsis">
-    🇺🇸 Rabin-Karp for String Matching
+    🇧🇷 Algoritmo de Rabin-Karp para busca de padrões em strings
   </span>
   
 
@@ -6535,6 +6535,10 @@ Describe the issue of this article in detail.
   
   
 
+  
+  
+  
+
 
 
 
@@ -6625,9 +6629,19 @@ Because it avoids recursion, the code will run a little bit faster than the recu
 <span class="p">}</span>
 </code></pre></div>
 <p>If you look closely at the variables <code>a1</code> and <code>b1</code>, you can notice that they take exactly the same values as in the iterative version of the normal <a href="euclid-algorithm.html">Euclidean algorithm</a>. So the algorithm will at least compute the correct GCD.</p>
-<p>To see why the algorithm also computes the correct coefficients, you can check that the following invariants will hold at any time (before the while loop, and at the end of each iteration): <span class="arithmatex">$x \cdot a + y \cdot b = a_1$</span> and <span class="arithmatex">$x_1 \cdot a + y_1 \cdot b = b_1$</span>.
-It's trivial to see, that these two equations are satisfied at the beginning.
-And you can check that the update in the loop iteration will still keep those equalities valid.</p>
+<p>To see why the algorithm computes the correct coefficients, consider that the following invariants hold at any given time (before the while loop begins and at the end of each iteration):</p>
+<div class="arithmatex">$$x \cdot a + y \cdot b = a_1$$</div>
+<div class="arithmatex">$$x_1 \cdot a + y_1 \cdot b = b_1$$</div>
+<p>Let the values at the end of an iteration be denoted by a prime (<span class="arithmatex">$'$</span>), and assume <span class="arithmatex">$q = \frac{a_1}{b_1}$</span>. From the <a href="euclid-algorithm.html">Euclidean algorithm</a>, we have:</p>
+<div class="arithmatex">$$a_1' = b_1$$</div>
+<div class="arithmatex">$$b_1' = a_1 - q \cdot b_1$$</div>
+<p>For the first invariant to hold, the following should be true:</p>
+<div class="arithmatex">$$x' \cdot a + y' \cdot b = a_1' = b_1$$</div>
+<div class="arithmatex">$$x' \cdot a + y' \cdot b = x_1 \cdot a + y_1 \cdot b$$</div>
+<p>Similarly for the second invariant, the following should hold:</p>
+<div class="arithmatex">$$x_1' \cdot a + y_1' \cdot b = a_1 - q \cdot b_1$$</div>
+<div class="arithmatex">$$x_1' \cdot a + y_1' \cdot b = (x - q \cdot x_1) \cdot a + (y - q \cdot y_1) \cdot b$$</div>
+<p>By comparing the coefficients of <span class="arithmatex">$a$</span> and <span class="arithmatex">$b$</span>, the update equations for each variable can be derived, ensuring that the invariants are maintained throughout the algorithm.</p>
 <p>At the end we know that <span class="arithmatex">$a_1$</span> contains the GCD, so <span class="arithmatex">$x \cdot a + y \cdot b = g$</span>.
 Which means that we have found the required coefficients.</p>
 <p>You can even optimize the code more, and remove the variable <span class="arithmatex">$a_1$</span> and <span class="arithmatex">$b_1$</span> from the code, and just reuse <span class="arithmatex">$a$</span> and <span class="arithmatex">$b$</span>.
@@ -6641,7 +6655,7 @@ However if you do so, you lose the ability to argue about the invariants.</p>
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (59.82%)</li><li><a href="#" title="Silap Aliyev" data-bi-name="contributorprofile" target="_blank">Silap Aliyev</a> (25.0%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (5.36%)</li><li><a href="#" title="Morass" data-bi-name="contributorprofile" target="_blank">Morass</a> (3.57%)</li><li><a href="#" title="Mariia Mykhailova" data-bi-name="contributorprofile" target="_blank">Mariia Mykhailova</a> (1.79%)</li><li><a href="#" title="boxlesscat" data-bi-name="contributorprofile" target="_blank">boxlesscat</a> (1.79%)</li><li><a href="#" title="Anton Älgmyr" data-bi-name="contributorprofile" target="_blank">Anton Älgmyr</a> (0.89%)</li><li><a href="#" title="Rohit Choudhary" data-bi-name="contributorprofile" target="_blank">Rohit Choudhary</a> (0.89%)</li><li><a href="#" title="jxu" data-bi-name="contributorprofile" target="_blank">jxu</a> (0.89%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (47.41%)</li><li><a href="#" title="Silap Aliyev" data-bi-name="contributorprofile" target="_blank">Silap Aliyev</a> (20.74%)</li><li><a href="#" title="Kshitij Sharma" data-bi-name="contributorprofile" target="_blank">Kshitij Sharma</a> (19.26%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (4.44%)</li><li><a href="#" title="Morass" data-bi-name="contributorprofile" target="_blank">Morass</a> (2.96%)</li><li><a href="#" title="Mariia Mykhailova" data-bi-name="contributorprofile" target="_blank">Mariia Mykhailova</a> (1.48%)</li><li><a href="#" title="boxlesscat" data-bi-name="contributorprofile" target="_blank">boxlesscat</a> (1.48%)</li><li><a href="#" title="Anton Älgmyr" data-bi-name="contributorprofile" target="_blank">Anton Älgmyr</a> (0.74%)</li><li><a href="#" title="Rohit Choudhary" data-bi-name="contributorprofile" target="_blank">Rohit Choudhary</a> (0.74%)</li><li><a href="#" title="jxu" data-bi-name="contributorprofile" target="_blank">jxu</a> (0.74%)</li></ul>
 </ul>
                 
               </article>

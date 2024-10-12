@@ -2432,7 +2432,7 @@
         
   
   <span class="md-ellipsis">
-    🇺🇸 Rabin-Karp for String Matching
+    🇧🇷 Algoritmo de Rabin-Karp para busca de padrões em strings
   </span>
   
 
@@ -6561,6 +6561,10 @@ Describe the issue of this article in detail.
   
   
 
+  
+  
+  
+
 
 
 
@@ -6708,7 +6712,7 @@ $$</div>
 <div class="arithmatex">$$
 \frac{p_{k+1}}{q_{k+1}} = \frac{p_{k-1} + a_k p_k}{q_{k-1} + a_k q_k},
 $$</div>
-<p>where <span class="arithmatex">$a_k$</span> is a positive integer number. If you're familiar with <a href="">continued fractions</a>, you would recognize that the sequence <span class="arithmatex">$\frac{p_i}{q_i}$</span> is the sequence of the convergent fractions of <span class="arithmatex">$\frac{p}{q}$</span> and the sequence <span class="arithmatex">$[a_1; a_2, \dots, a_{n}, 1]$</span> represents the continued fraction of <span class="arithmatex">$\frac{p}{q}$</span>.</p>
+<p>where <span class="arithmatex">$a_k$</span> is a positive integer number. If you're familiar with <a href="../algebra/continued-fractions.html">continued fractions</a>, you would recognize that the sequence <span class="arithmatex">$\frac{p_i}{q_i}$</span> is the sequence of the convergent fractions of <span class="arithmatex">$\frac{p}{q}$</span> and the sequence <span class="arithmatex">$[a_1; a_2, \dots, a_{n}, 1]$</span> represents the continued fraction of <span class="arithmatex">$\frac{p}{q}$</span>.</p>
 <p>This allows to find the run-length encoding of the path to <span class="arithmatex">$\frac{p}{q}$</span> in the manner which follows the algorithm for computing continued fraction representation of the fraction <span class="arithmatex">$\frac{p}{q}$</span>:</p>
 <div class="highlight"><pre><span></span><code><span class="k">auto</span><span class="w"> </span><span class="n">find</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">q</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>

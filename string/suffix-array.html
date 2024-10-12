@@ -2441,7 +2441,7 @@
         
   
   <span class="md-ellipsis">
-    🇺🇸 Rabin-Karp for String Matching
+    🇧🇷 Algoritmo de Rabin-Karp para busca de padrões em strings
   </span>
   
 
@@ -6639,6 +6639,10 @@ Describe the issue of this article in detail.
   
   
 
+  
+  
+  
+
 
 
 
@@ -6830,7 +6834,7 @@ We use temporary arrays <span class="arithmatex">$pn[]$</span> and <span class="
 The algorithm requires <span class="arithmatex">$O(n \log n)$</span> time and <span class="arithmatex">$O(n)$</span> memory. For simplicity we used the complete ASCII range as alphabet.</p>
 <p>If it is known that the string only contains a subset of characters, e.g. only lowercase letters, then the implementation can be optimized, but the optimization factor would likely be insignificant, as the size of the alphabet only matters on the first iteration. Every other iteration depends on the number of equivalence classes, which may quickly reach <span class="arithmatex">$O(n)$</span> even if initially it was a string over the alphabet of size <span class="arithmatex">$2$</span>.</p>
 <p>Also note, that this algorithm only sorts the cycle shifts.
-As mentioned at the beginning of this section we can generate the sorted order of the suffixes by appending a character that is smaller than all other characters of the string, and sorting this resulting string by cycle shifts, e.g. by sorting the cycle shifts of $s + $$.
+As mentioned at the beginning of this section we can generate the sorted order of the suffixes by appending a character that is smaller than all other characters of the string, and sorting this resulting string by cycle shifts, e.g. by sorting the cycle shifts of <span class="arithmatex">$s + \$$</span>.
 This will obviously give the suffix array of <span class="arithmatex">$s$</span>, however prepended with <span class="arithmatex">$|s|$</span>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">suffix_array_construction</span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">s</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s">&quot;$&quot;</span><span class="p">;</span>
@@ -7003,7 +7007,7 @@ Summing over all the suffixes, we get the final answer:</p>
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (77.03%)</li><li><a href="#" title="samsidx" data-bi-name="contributorprofile" target="_blank">samsidx</a> (6.46%)</li><li><a href="#" title="Morass" data-bi-name="contributorprofile" target="_blank">Morass</a> (5.26%)</li><li><a href="#" title="Wanderley da Silva" data-bi-name="contributorprofile" target="_blank">Wanderley da Silva</a> (2.15%)</li><li><a href="#" title="Anton Älgmyr" data-bi-name="contributorprofile" target="_blank">Anton Älgmyr</a> (1.91%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (1.91%)</li><li><a href="#" title="Nhan Tran" data-bi-name="contributorprofile" target="_blank">Nhan Tran</a> (1.67%)</li><li><a href="#" title="Chirag Agarwal" data-bi-name="contributorprofile" target="_blank">Chirag Agarwal</a> (1.2%)</li><li><a href="#" title="Vatsal Sharma" data-bi-name="contributorprofile" target="_blank">Vatsal Sharma</a> (0.96%)</li><li><a href="#" title="Shadab Zafar" data-bi-name="contributorprofile" target="_blank">Shadab Zafar</a> (0.48%)</li><li><a href="#" title="Bhuvnesh Jain" data-bi-name="contributorprofile" target="_blank">Bhuvnesh Jain</a> (0.24%)</li><li><a href="#" title="Dao Le Bao Minh" data-bi-name="contributorprofile" target="_blank">Dao Le Bao Minh</a> (0.24%)</li><li><a href="#" title="Donald Dong" data-bi-name="contributorprofile" target="_blank">Donald Dong</a> (0.24%)</li><li><a href="#" title="Le Bao Hiep" data-bi-name="contributorprofile" target="_blank">Le Bao Hiep</a> (0.24%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (76.79%)</li><li><a href="#" title="samsidx" data-bi-name="contributorprofile" target="_blank">samsidx</a> (6.46%)</li><li><a href="#" title="Morass" data-bi-name="contributorprofile" target="_blank">Morass</a> (5.26%)</li><li><a href="#" title="Wanderley da Silva" data-bi-name="contributorprofile" target="_blank">Wanderley da Silva</a> (2.15%)</li><li><a href="#" title="Anton Älgmyr" data-bi-name="contributorprofile" target="_blank">Anton Älgmyr</a> (1.91%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (1.91%)</li><li><a href="#" title="Nhan Tran" data-bi-name="contributorprofile" target="_blank">Nhan Tran</a> (1.67%)</li><li><a href="#" title="Chirag Agarwal" data-bi-name="contributorprofile" target="_blank">Chirag Agarwal</a> (1.2%)</li><li><a href="#" title="Vatsal Sharma" data-bi-name="contributorprofile" target="_blank">Vatsal Sharma</a> (0.96%)</li><li><a href="#" title="Shadab Zafar" data-bi-name="contributorprofile" target="_blank">Shadab Zafar</a> (0.48%)</li><li><a href="#" title="Bhuvnesh Jain" data-bi-name="contributorprofile" target="_blank">Bhuvnesh Jain</a> (0.24%)</li><li><a href="#" title="Dao Le Bao Minh" data-bi-name="contributorprofile" target="_blank">Dao Le Bao Minh</a> (0.24%)</li><li><a href="#" title="Donald Dong" data-bi-name="contributorprofile" target="_blank">Donald Dong</a> (0.24%)</li><li><a href="#" title="Le Bao Hiep" data-bi-name="contributorprofile" target="_blank">Le Bao Hiep</a> (0.24%)</li><li><a href="#" title="Shyamal Vaderia" data-bi-name="contributorprofile" target="_blank">Shyamal Vaderia</a> (0.24%)</li></ul>
 </ul>
                 
               </article>

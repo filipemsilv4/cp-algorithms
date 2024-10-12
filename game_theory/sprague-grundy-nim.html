@@ -2434,7 +2434,7 @@
         
   
   <span class="md-ellipsis">
-    🇺🇸 Rabin-Karp for String Matching
+    🇧🇷 Algoritmo de Rabin-Karp para busca de padrões em strings
   </span>
   
 
@@ -6190,6 +6190,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#misere-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      Misère Game
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -6621,6 +6630,14 @@ Describe the issue of this article in detail.
   
   
 
+  
+  
+  
+
+  
+  
+  
+
 
 
 
@@ -6723,6 +6740,15 @@ That means any reachable state is a winning one (by the assumption of induction)
 <p><strong>Corollary.</strong>
 Any state of Nim can be replaced by an equivalent state as long as the xor-sum doesn't change.
 Moreover, when analyzing a Nim with several piles, we can replace it with a single pile of size <span class="arithmatex">$s$</span>.</p>
+<h3 id="misere-game">Misère Game<a class="headerlink" href="#misere-game" title="Permanent link">&para;</a></h3>
+<p>In a <strong>misère game</strong>, the goal of the game is opposite, so the player who removes the last stick loses the game.
+It turns out that the misère nim game can be optimally played almost like a standard nim game.
+ The idea is to first play the misère game like the standard game, but change the strategy at the end of the game.
+ The new strategy will be introduced in a situation where each heap would contain at most one stick after the next move.
+In the standard game, we should choose a move after which there is an even number of heaps with one stick. However, in 
+the misère game,we choose a move so that there is an odd number of heaps with one stick.
+  This strategy works because a state where the strategy changes always appears in the game, and this state is a 
+  winning state, because it contains exactly one heap that has more than one stick so the nim sum is not 0.</p>
 <h2 id="the-equivalence-of-impartial-games-and-nim-sprague-grundy-theorem">The equivalence of impartial games and Nim (Sprague-Grundy theorem)<a class="headerlink" href="#the-equivalence-of-impartial-games-and-nim-sprague-grundy-theorem" title="Permanent link">&para;</a></h2>
 <p>Now we will learn how to find, for any game state of any impartial game, a corresponding state of Nim.</p>
 <h3 id="lemma-about-nim-with-increases">Lemma about Nim with increases<a class="headerlink" href="#lemma-about-nim-with-increases" title="Permanent link">&para;</a></h3>
@@ -6805,11 +6831,12 @@ For the edge case of the cross being marked on position <span class="arithmatex"
 <li><a href="https://www.hackerrank.com/contests/5-days-of-game-theory/challenges/tower-breakers-2">HackerRank - Tower Breakers, Revisited!</a></li>
 <li><a href="https://www.hackerrank.com/contests/5-days-of-game-theory/challenges/tower-breakers-3/problem">HackerRank - Tower Breakers, Again!</a></li>
 <li><a href="https://www.hackerrank.com/contests/5-days-of-game-theory/challenges/a-chessboard-game">HackerRank - Chessboard Game, Again!</a></li>
+<li><a href="https://atcoder.jp/contests/abc368/tasks/abc368_f">Atcoder - ABC368F - Dividing Game</a></li>
 </ul>
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="wiktorkuchta" data-bi-name="contributorprofile" target="_blank">wiktorkuchta</a> (67.77%)</li><li><a href="#" title="Abhijeet Krishnan" data-bi-name="contributorprofile" target="_blank">Abhijeet Krishnan</a> (12.32%)</li><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (11.37%)</li><li><a href="#" title="iagorrr" data-bi-name="contributorprofile" target="_blank">iagorrr</a> (3.32%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (2.84%)</li><li><a href="#" title="Bergur Snorrason" data-bi-name="contributorprofile" target="_blank">Bergur Snorrason</a> (1.42%)</li><li><a href="#" title="JustAnAverageGuy" data-bi-name="contributorprofile" target="_blank">JustAnAverageGuy</a> (0.47%)</li><li><a href="#" title="Tanner Hoke" data-bi-name="contributorprofile" target="_blank">Tanner Hoke</a> (0.47%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="wiktorkuchta" data-bi-name="contributorprofile" target="_blank">wiktorkuchta</a> (64.13%)</li><li><a href="#" title="Abhijeet Krishnan" data-bi-name="contributorprofile" target="_blank">Abhijeet Krishnan</a> (11.66%)</li><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (10.76%)</li><li><a href="#" title="Anikett" data-bi-name="contributorprofile" target="_blank">Anikett</a> (4.93%)</li><li><a href="#" title="iagorrr" data-bi-name="contributorprofile" target="_blank">iagorrr</a> (3.14%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (2.69%)</li><li><a href="#" title="Bergur Snorrason" data-bi-name="contributorprofile" target="_blank">Bergur Snorrason</a> (1.35%)</li><li><a href="#" title="JustAnAverageGuy" data-bi-name="contributorprofile" target="_blank">JustAnAverageGuy</a> (0.45%)</li><li><a href="#" title="Tanner Hoke" data-bi-name="contributorprofile" target="_blank">Tanner Hoke</a> (0.45%)</li><li><a href="#" title="conlacda" data-bi-name="contributorprofile" target="_blank">conlacda</a> (0.45%)</li></ul>
 </ul>
                 
               </article>

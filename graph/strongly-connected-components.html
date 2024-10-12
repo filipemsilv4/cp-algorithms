@@ -2434,7 +2434,7 @@
         
   
   <span class="md-ellipsis">
-    🇺🇸 Rabin-Karp for String Matching
+    🇧🇷 Algoritmo de Rabin-Karp para busca de padrões em strings
   </span>
   
 
@@ -6564,6 +6564,10 @@ Describe the issue of this article in detail.
   
   
 
+  
+  
+  
+
 
 
 
@@ -6663,7 +6667,7 @@ Describe the issue of this article in detail.
 <span class="c1">// input: adj -- adjacency list of G</span>
 <span class="c1">// output: components -- the strongy connected components in G</span>
 <span class="c1">// output: adj_cond -- adjacency list of G^SCC (by root vertices)</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">strongy_connected_components</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="k">const</span><span class="o">&amp;</span><span class="w"> </span><span class="n">adj</span><span class="p">,</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">strongly_connected_components</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="k">const</span><span class="o">&amp;</span><span class="w"> </span><span class="n">adj</span><span class="p">,</span>
 <span class="w">                                  </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">components</span><span class="p">,</span>
 <span class="w">                                  </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">adj_cond</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">adj</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
@@ -6694,9 +6698,8 @@ Describe the issue of this article in detail.
 <span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">visited</span><span class="p">[</span><span class="n">v</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">component</span><span class="p">;</span>
 <span class="w">            </span><span class="n">dfs</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">adj_rev</span><span class="p">,</span><span class="w"> </span><span class="n">component</span><span class="p">);</span>
-<span class="w">            </span><span class="n">sort</span><span class="p">(</span><span class="n">component</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">component</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
 <span class="w">            </span><span class="n">components</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">component</span><span class="p">);</span>
-<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">component</span><span class="p">.</span><span class="n">front</span><span class="p">();</span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="n">min_element</span><span class="p">(</span><span class="n">begin</span><span class="p">(</span><span class="n">component</span><span class="p">),</span><span class="w"> </span><span class="n">end</span><span class="p">(</span><span class="n">component</span><span class="p">));</span>
 <span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">component</span><span class="p">)</span>
 <span class="w">                </span><span class="n">roots</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">root</span><span class="p">;</span>
 <span class="w">        </span><span class="p">}</span>
@@ -6711,7 +6714,7 @@ Describe the issue of this article in detail.
 </code></pre></div>
 <p>The function <code>dfs</code> implements depth first search. It takes as input an adjacency list and a starting vertex. It also takes a reference to the vector <code>output</code>: each visited vertex will be appended to <code>output</code> when <code>dfs</code> leaves that vertex.</p>
 <p>Note that we use the function <code>dfs</code> both in the first and second step of the algorithm. In the first step, we pass in the adjacency list of <span class="arithmatex">$G$</span>, and during consecutive calls to <code>dfs</code>, we keep passing in the same 'output vector' <code>order</code>, so that eventually we obtain a list of vertices in increasing order of exit times. In the second step, we pass in the adjacency list of <span class="arithmatex">$G^T$</span>, and in each call, we pass in an empty 'output vector' <code>component</code>, which will give us one strongly connected component at a time.</p>
-<p>When building the adjacency list of the condensation graph, we select the <em>root</em> of each component as the first vertex in its sorted list of vertices (this is an arbitrary choice). This root vertex represents its entire SCC. For each vertex <code>v</code>, the value <code>roots[v]</code> indicates the root vertex of the SCC which <code>v</code> belongs to.</p>
+<p>When building the adjacency list of the condensation graph, we select the <em>root</em> of each component as the first vertex in its list of vertices (this is an arbitrary choice). This root vertex represents its entire SCC. For each vertex <code>v</code>, the value <code>roots[v]</code> indicates the root vertex of the SCC which <code>v</code> belongs to.</p>
 <p>Our condensation graph is now given by the vertices <code>components</code> (one strongly connected component corresponds to one vertex in the condensation graph), and the adjacency list is given by <code>adj_cond</code>, using only the root vertices of the strongly connected components. Notice that we generate one edge from <span class="arithmatex">$C$</span> to <span class="arithmatex">$C'$</span> in <span class="arithmatex">$G^\text{SCC}$</span> for each edge from some <span class="arithmatex">$a\in C$</span> to some <span class="arithmatex">$b\in C'$</span> in <span class="arithmatex">$G$</span> (if <span class="arithmatex">$C\neq C'$</span>). This implies that in our implementation, we can have multiple edges between two components in the condensation graph.</p>
 <h2 id="literature">Literature<a class="headerlink" href="#literature" title="Permanent link">&para;</a></h2>
 <ul>
@@ -6745,7 +6748,7 @@ Describe the issue of this article in detail.
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="el-sambal" data-bi-name="contributorprofile" target="_blank">el-sambal</a> (55.49%)</li><li><a href="#" title="Dmitry Dobrynin" data-bi-name="contributorprofile" target="_blank">Dmitry Dobrynin</a> (15.03%)</li><li><a href="#" title="Morass" data-bi-name="contributorprofile" target="_blank">Morass</a> (8.09%)</li><li><a href="#" title="Gaurang Tandon" data-bi-name="contributorprofile" target="_blank">Gaurang Tandon</a> (6.94%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (5.2%)</li><li><a href="#" title="Shadab Zafar" data-bi-name="contributorprofile" target="_blank">Shadab Zafar</a> (2.31%)</li><li><a href="#" title="Rodion Gorkovenko" data-bi-name="contributorprofile" target="_blank">Rodion Gorkovenko</a> (1.73%)</li><li><a href="#" title="Aryaman" data-bi-name="contributorprofile" target="_blank">Aryaman</a> (1.16%)</li><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (1.16%)</li><li><a href="#" title="Mikael Mello" data-bi-name="contributorprofile" target="_blank">Mikael Mello</a> (1.16%)</li><li><a href="#" title="Anton Älgmyr" data-bi-name="contributorprofile" target="_blank">Anton Älgmyr</a> (0.58%)</li><li><a href="#" title="Chirag Agarwal" data-bi-name="contributorprofile" target="_blank">Chirag Agarwal</a> (0.58%)</li><li><a href="#" title="Tanmay Sinha" data-bi-name="contributorprofile" target="_blank">Tanmay Sinha</a> (0.58%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="el-sambal" data-bi-name="contributorprofile" target="_blank">el-sambal</a> (54.07%)</li><li><a href="#" title="Dmitry Dobrynin" data-bi-name="contributorprofile" target="_blank">Dmitry Dobrynin</a> (15.12%)</li><li><a href="#" title="Morass" data-bi-name="contributorprofile" target="_blank">Morass</a> (8.14%)</li><li><a href="#" title="Gaurang Tandon" data-bi-name="contributorprofile" target="_blank">Gaurang Tandon</a> (6.98%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (5.82%)</li><li><a href="#" title="Shadab Zafar" data-bi-name="contributorprofile" target="_blank">Shadab Zafar</a> (2.33%)</li><li><a href="#" title="Rodion Gorkovenko" data-bi-name="contributorprofile" target="_blank">Rodion Gorkovenko</a> (1.74%)</li><li><a href="#" title="Aryaman" data-bi-name="contributorprofile" target="_blank">Aryaman</a> (1.16%)</li><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (1.16%)</li><li><a href="#" title="Mikael Mello" data-bi-name="contributorprofile" target="_blank">Mikael Mello</a> (1.16%)</li><li><a href="#" title="Anton Älgmyr" data-bi-name="contributorprofile" target="_blank">Anton Älgmyr</a> (0.58%)</li><li><a href="#" title="Chirag Agarwal" data-bi-name="contributorprofile" target="_blank">Chirag Agarwal</a> (0.58%)</li><li><a href="#" title="Tanmay Sinha" data-bi-name="contributorprofile" target="_blank">Tanmay Sinha</a> (0.58%)</li><li><a href="#" title="chubakueno" data-bi-name="contributorprofile" target="_blank">chubakueno</a> (0.58%)</li></ul>
 </ul>
                 
               </article>
