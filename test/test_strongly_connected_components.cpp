@@ -28,12 +28,14 @@ int main() {
     adj[9].push_back(4);
 
     vector<vector<int>> components, adj_scc;
-    strongy_connected_components(adj, components, adj_scc);
+    strongly_connected_components(adj, components, adj_scc);
 
     // sort things to make it easier to verify
+    for (vector<int> &a : components)
+        sort(a.begin(), a.end());
     sort(components.begin(), components.end(),
          [](auto &l, auto &r) { return l[0] < r[0]; });
-    for (vector<int> a : adj_scc)
+    for (vector<int> &a : adj_scc)
         sort(a.begin(), a.end());
 
     assert(components.size() == 4);
