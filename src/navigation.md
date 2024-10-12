@@ -74,7 +74,7 @@ Artigos com a bandeira 🇺🇸 estão em inglês. Artigos com a bandeira 🇧�
 - String Processing
     - Fundamentals
         - [🇧🇷 Hashing de Strings](string/string-hashing.md)
-        - [🇺🇸 Rabin-Karp for String Matching](string/rabin-karp.md)
+        - [🇧🇷 Algoritmo de Rabin-Karp para busca de padrões em strings](string/rabin-karp.md)
         - [🇺🇸 Prefix function - Knuth-Morris-Pratt](string/prefix-function.md)
         - [🇺🇸 Z-function](string/z-function.md)
         - [🇺🇸 Suffix Array](string/suffix-array.md)
